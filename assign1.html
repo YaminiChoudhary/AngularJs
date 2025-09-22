@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="MyController">
+
+    <h1>Student Information Dashboard</h1>
+
+    <div>
+        <p>[1]  Name : {{student.name}}</p>
+        <p>[2]  Roll Number: {{student.rollNumber}}</p>
+        <p>[3]  College Name : {{student.college}}</p>
+        <p>[4]  Class : {{student.class}}</p>
+    </div>
+
+    <script>
+        var app = angular.module("MyApp", []);
+
+        app.controller("MyController", function($scope) {
+            $scope.student = {
+                name: "Yamini Choudhary",
+                rollNumber: "7",
+                college: "IMRD COLLEGE ,SHAHADA",
+                class: "TYBCA"
+            };
+        });
+    </script>
+
+</body>
+</html>
